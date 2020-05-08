@@ -13,6 +13,7 @@ class App extends Component {
       cartItems: [],
     };
     this.handleChangeSort = this.handleChangeSort.bind(this);
+    this.handleChangeSize = this.handleChangeSize.bind(this);
     this.handleAddToCart = this.handleAddToCart.bind(this);
     this.handleRemoveFromCart = this.handleRemoveFromCart.bind(this);
   }
@@ -34,6 +35,11 @@ class App extends Component {
   }
 
   handleChangeSort(e) {
+    this.setState({ size: e.target.value });
+    this.listProducts();
+  }
+
+  handleChangeSize(e) {
     this.setState({ sort: e.target.value });
     this.listProducts();
   }
@@ -79,6 +85,15 @@ class App extends Component {
       } else {
         state.products.sort((a, b) => (a.id < b.id ? 1 : -1));
       }
+
+      if (state.size !== ' ') {
+        return {
+          filteredProducts: state.products.filter(
+            (a) => a.availableSizes.indexOf(state.size.toUpperCase()) >= 0
+          ),
+        };
+      }
+
       return { filteredProducts: state.products };
     });
   }
