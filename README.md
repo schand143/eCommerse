@@ -4,6 +4,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Demo
+
+Open [Shopping Cart Demo](https://schand143.github.io/eCommerse/)
+
+\$ clone https://github.com/schand143/eCommerse.git
+
+## Run Server
+
+```
+$ npm install -g json-server
+Then
+$ yarn server
+or
+$ json-server public/db.json --port 8000
+```
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
