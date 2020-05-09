@@ -18,7 +18,7 @@ class App extends Component {
     this.handleRemoveFromCart = this.handleRemoveFromCart.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('http://localhost:8000/products')
       .then((res) => res.json())
       .then((data) =>

@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ## Demo
 
-Open [Shopping Cart Demo](https://schand143.github.io/eCommerse/)
+<!-- Open [Shopping Cart Demo](https://schand143.github.io/eCommerse/) -->
 
 \$ clone https://github.com/schand143/eCommerse.git
 
